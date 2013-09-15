@@ -4,12 +4,12 @@ es:
     - dom
     - lun
     - mar
-    - mié
+    - mi√©
     - jue
     - vie
-    - sáb
+    - s√°b
     abbr_month_names:
-    -
+    - 
     - ene
     - feb
     - mar
@@ -26,16 +26,16 @@ es:
     - domingo
     - lunes
     - martes
-    - miércoles
+    - mi√©rcoles
     - jueves
     - viernes
-    - sábado
+    - s√°bado
     formats:
       default: ! '%d/%m/%Y'
       long: ! '%A, %d de %B de %Y'
       short: ! '%d de %b'
     month_names:
-    -
+    - 
     - enero
     - febrero
     - marzo
@@ -61,11 +61,11 @@ es:
         one: cerca de 1 mes
         other: cerca de %{count} meses
       about_x_years:
-        one: cerca de 1 año
-        other: cerca de %{count} años
+        one: cerca de 1 a√±o
+        other: cerca de %{count} a√±os
       almost_x_years:
-        one: casi 1 año
-        other: casi %{count} años
+        one: casi 1 a√±o
+        other: casi %{count} a√±os
       half_a_minute: medio minuto
       less_than_x_minutes:
         one: menos de 1 minuto
@@ -74,11 +74,11 @@ es:
         one: menos de 1 segundo
         other: menos de %{count} segundos
       over_x_years:
-        one: más de 1 año
-        other: más de %{count} años
+        one: m√°s de 1 a√±o
+        other: m√°s de %{count} a√±os
       x_days:
-        one: 1 día
-        other: ! '%{count} días'
+        one: 1 d√≠a
+        other: ! '%{count} d√≠as'
       x_minutes:
         one: 1 minuto
         other: ! '%{count} minutos'
@@ -89,44 +89,44 @@ es:
         one: 1 segundo
         other: ! '%{count} segundos'
     prompts:
-      day: Día
+      day: D√≠a
       hour: Hora
       minute: Minuto
       month: Mes
       second: Segundos
-      year: Año
-  errors: &errors
+      year: A√±o
+  errors:
     format: ! '%{attribute} %{message}'
     messages:
       accepted: debe ser aceptado
       blank: no puede estar en blanco
-      confirmation: no coincide con la confirmación
-      empty: no puede estar vacío
+      confirmation: no coincide con la confirmaci√≥n
+      empty: no puede estar vac√≠o
       equal_to: debe ser igual a %{count}
-      even: debe ser un número par
-      exclusion: está reservado
+      even: debe ser un n√∫mero par
+      exclusion: est√° reservado
       greater_than: debe ser mayor que %{count}
       greater_than_or_equal_to: debe ser mayor o igual que %{count}
-      inclusion: no está incluído en la lista
-      invalid: es inválido
+      inclusion: no est√° inclu√≠do en la lista
+      invalid: es inv√°lido
       less_than: debe ser menor que %{count}
       less_than_or_equal_to: debe ser menor o igual que %{count}
-      not_a_number: no es un número
+      not_a_number: no es un n√∫mero
       not_an_integer: debe ser un entero
-      odd: debe ser un número non
-      record_invalid: ! 'La validación falló: %{errors}'
+      odd: debe ser un n√∫mero non
+      record_invalid: ! 'La validaci√≥n fall√≥: %{errors}'
       taken: ya ha sido tomado
       too_long:
-        one: es demasiado largo (máximo 1 caracter)
-        other: es demasiado largo (máximo %{count} caracteres)
+        one: es demasiado largo (m√°ximo 1 caracter)
+        other: es demasiado largo (m√°ximo %{count} caracteres)
       too_short:
-        one: es demasiado corto (mínimo 1 caracter)
-        other: es demasiado corto (mínimo %{count} caracteres)
+        one: es demasiado corto (m√≠nimo 1 caracter)
+        other: es demasiado corto (m√≠nimo %{count} caracteres)
       wrong_length:
-        one: longitud errónea (debe ser de 1 caracter)
-        other: longitud errónea (debe ser de %{count} caracteres)
+        one: longitud err√≥nea (debe ser de 1 caracter)
+        other: longitud err√≥nea (debe ser de %{count} caracteres)
     template:
-      body: ! 'Revise que los siguientes campos sean válidos:'
+      body: ! 'Revise que los siguientes campos sean v√°lidos:'
       header:
         one: ! '%{model} no pudo guardarse debido a 1 error'
         other: ! '%{model} no pudo guardarse debido a %{count} errores'
@@ -158,10 +158,10 @@ es:
         format: ! '%n %u'
         units:
           billion: mil millones
-          million: millón
+          million: mill√≥n
           quadrillion: mil billones
           thousand: mil
-          trillion: billón
+          trillion: bill√≥n
           unit: ''
       format:
         delimiter: ! ','
@@ -196,10 +196,3 @@ es:
       long: ! '%A, %d de %B de %Y a las %I:%M %p'
       short: ! '%d de %b a las %H:%M hrs'
     pm: pm
-  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
-  activemodel:
-    errors:
-      <<: *errors
-  activerecord:
-    errors:
-      <<: *errors
