@@ -11,24 +11,22 @@
 # end
 
 # These inflection rules are supported but not enabled by default:
-# ActiveSupport::Inflector.inflections(:en) do |inflect|
-#   inflect.acronym 'RESTful'
-# end
+ ActiveSupport::Inflector.inflections(:en) do |inflect|
+   inflect.acronym 'RESTful'
+ end
 
 # Inflector#inflections now takes a locale as a parameter (defaults to :en)
 ActiveSupport::Inflector.inflections(:es) do |inflect|
-  inflect.plural(/$/, 's')
-  inflect.plural(/([^aeéiou])$/i, '\1es')
-  inflect.plural(/([aeiou]s)$/i, '\1')
-  inflect.plural(/z$/i, 'ces')
-  inflect.plural(/á([sn])$/i, 'a\1es')
-  inflect.plural(/é([sn])$/i, 'e\1es')
-  inflect.plural(/í([sn])$/i, 'i\1es')
-  inflect.plural(/ó([sn])$/i, 'o\1es')
-  inflect.plural(/ú([sn])$/i, 'u\1es')
-
-  inflect.singular(/s$/, '')
-  inflect.singular(/es$/, '')
-
-  inflect.irregular('el', 'los')
+  inflect.plural /([aeiou])([A-Z]|_|$)/, '\1s\2'
+  inflect.plural /([rlnd])([A-Z]|_|$)/, '\1es\2'
+  inflect.plural /([aeiou])([A-Z]|_|$)([a-z]+)([rlnd])($)/, '\1s\2\3\4es\5'
+  inflect.plural /([rlnd])([A-Z]|_|$)([a-z]+)([aeiou])($)/, '\1es\2\3\4s\5'
+  inflect.singular /([aeiou])s([A-Z]|_|$)/, '\1\2'
+  inflect.singular /([rlnd])es([A-Z]|_|$)/, '\1\2'
+  inflect.singular /([aeiou])s([A-Z]|_)([a-z]+)([rlnd])es($)/, '\1\2\3\4\5'
+  inflect.singular /([rlnd])es([A-Z]|_)([a-z]+)([aeiou])s($)/, '\1\2\3\4\5'
+  inflect.irregular 'user', 'users'
+  inflect.irregular 'account', 'accounts'
+  inflect.irregular 'password', 'passwords'
+  inflect.irregular 'session', 'sessions'
 end
