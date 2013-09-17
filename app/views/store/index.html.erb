@@ -1,0 +1,63 @@
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing">
+
+  <!-- Three columns of text below the carousel -->
+  <div class="row">
+
+    <div class="col-lg-4">
+	  
+	  <%= image_tag "http://evans.com.mx/imagenes/productos/Bombas_para_agua_EVANS_1HME025_1M.png", :title => "title", :class => "img-circle",:size => "140x140" %>
+	  
+      <h2>Domestica</h2>
+      <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+      <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+	  <%= image_tag "http://evans.com.mx/imagenes/productos/Bombas_para_agua_SUPER_MT2ME100_1M.png", :title => "title", :class => "img-circle",:size => "140x140" %>
+      <h2>Industrial</h2>
+      <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+      <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+		
+      <%= image_tag "http://evans.com.mx/imagenes/productos/Bombas_para_agua_EVANS_HP2ME300_1M.png", :title => "title", :class => "img-circle",:size => "140x140" %>
+      <h2>A gasolina</h2>
+      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+    </div><!-- /.col-lg-4 -->
+  </div><!-- /.row -->
+
+
+<!-- START THE FEATURETTES -->
+
+
+  </tr>
+
+
+<hr class="featurette-divider">
+
+
+<% @products.each do |product| %>
+
+<div class="row featurette">
+  <div class="col-md-6">
+
+    <h2 class="featurette-heading"><%= product.name %><span class="text-muted"> <%= number_to_currency(product.price) %></span></h2>
+    <p class="lead"><%= product.description %></p>
+  </div>
+  <div class="col-md-6">
+	   <%= image_tag product.image_url, :title => "title", :class => "featurette-image img-responsive" %>
+
+  </div>
+
+</div>
+
+<hr class="featurette-divider">
+<% end %>
+
+
+<!-- /END THE FEATURETTES -->
+

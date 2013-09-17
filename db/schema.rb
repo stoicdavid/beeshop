@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20130915212057) do
     t.string   "name"
     t.text     "description"
     t.string   "image_url"
-    t.integer  "type"
+    t.integer  "category_ref"
     t.decimal  "price"
     t.datetime "created_at"
     t.datetime "updated_at"
