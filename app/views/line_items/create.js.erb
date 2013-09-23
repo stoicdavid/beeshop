@@ -1,0 +1,2 @@
+$('#cartcontent').html("<%= escape_javascript render(@cart) %>");
+$("#flash").html("<div class='alert alert-success'> <a class='close' data-dismiss='alert' aria-hidden='true'>&times;</a><%= escape_javascript(flash[:notice]='Producto agregado')%></div>");

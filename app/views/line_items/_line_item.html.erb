@@ -1,0 +1,16 @@
+<ul class="list-group">
+		<li class="list-group-item">
+			<table>
+
+				<tr>
+					<td width="400px">
+						<span class="badge pull-left"><%= line_item.quantity %></span>
+						&times; <%= line_item.product.name %>
+		 			</td>
+					<td >
+						<%= number_to_currency(line_item.total_price) %>
+					</td>
+				</tr>
+			</table>
+		</li>
+</ul>

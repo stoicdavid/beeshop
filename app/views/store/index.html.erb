@@ -39,23 +39,43 @@
 
 <hr class="featurette-divider">
 
+<% cache ['store', Product.latest] do %>
 
-<% @products.each do |product| %>
+	<% @products.each do |product| %>
+			  <div class="col-lg-4">
+		  <% cache ['entry', product] do %>
 
-<div class="row featurette">
-  <div class="col-md-6">
+		  <div class="panel panel-warning">
+			  <div class="panel-heading">
+			      <h3 class="panel-title"><%= product.name %></h3>
+			    </div>
+		    <div class="panel-body">
+		     	 <%= image_tag product.image_url, :title => "title",:size => "200x200" %>
+		    </div>
+		    <div class="panel-footer">
 
-    <h2 class="featurette-heading"><%= product.name %><span class="text-muted"> <%= number_to_currency(product.price) %></span></h2>
-    <p class="lead"><%= product.description %></p>
-  </div>
-  <div class="col-md-6">
-	   <%= image_tag product.image_url, :title => "title", :class => "featurette-image img-responsive" %>
 
-  </div>
+				<table>
+					<th width="90%">
+					<span class="text-muted"> <%= number_to_currency(product.price) %></span>
+					</th>
+					<th width="20%"></th>
+					<th>
+						<%= button_to line_items_path(product_id: product),:class => "btn btn-warning",remote: true do%>
+							<span class="glyphicon glyphicon-shopping-cart"></span> 
+						<% end %>
 
-</div>
+					</th>
+				</table>
+			</div>
 
-<hr class="featurette-divider">
+		  </div>
+
+<p><br></p>
+		<% end %>
+		  </div>		
+	<% end %>
+
 <% end %>
 
 

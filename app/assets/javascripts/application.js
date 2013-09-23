@@ -15,3 +15,7 @@
 //= require turbolinks
 //= require_tree .
 //= require twitter/bootstrap
+
+$(function(){
+       $('tcart').tooltip({placement: 'right'});
+    });
