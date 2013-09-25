@@ -18,7 +18,16 @@
 			            <span class="icon-bar"></span>
 					</button>
 					<%= image_tag "https://dl.dropboxusercontent.com/u/38853425/relogo_alpha.png", :title => "title", :size => "50x50"%>					  
-					
+					<div class="navbar-toggle">
+					<%= link_to "#cart",:class => "btn-lg",:data => {:toggle => "modal"} do %>
+						<span class="glyphicon glyphicon-shopping-cart"></span> 
+						<span id="current_item" class="badge pull-right">	
+							<div id="items">
+								<%= @cart.total_items%>
+							</div>
+							</span>								
+					<% end %>
+					</div>
 			        </div>
 			        <div class="navbar-collapse collapse">
 	  	              <ul class="nav navbar-nav">
@@ -38,18 +47,16 @@
 	  	                  </ul>
 	  	                </li>
 						<li>
-						
-						<%= link_to "#cart",:class => "btn-lg",:data => {:toggle => "modal"} do %>
-							<span class="glyphicon glyphicon-shopping-cart"></span> 
-							<span id="current_item" class="badge pull-right">	
-								<div id="items">
-									<%= @cart.total_items%>
-								</div>
-								</span>								
-						<% end %>
-
-						
+							<%= link_to "#cart",:class => "btn-lg",:data => {:toggle => "modal"} do %>
+								<span class="glyphicon glyphicon-shopping-cart"></span> 
+								<span id="current_item" class="badge pull-right">	
+									<div id="items">
+										<%= @cart.total_items%>
+									</div>
+									</span>								
+							<% end %>
 						</li>
+
 	  	              </ul>
 	  				  <form class="navbar-form navbar-right">
 	  				              <div class="form-group">
