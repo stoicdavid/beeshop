@@ -1,0 +1,18 @@
+#encoding: iso-8859-1
+<h3>Pedido de BEE Shop confirmado</h3> 
+<p>
+	Hola <strong><%= @order.name %></strong>!
+</p>
+<p>
+	Gracias por haber comprado con Bombas y Equipos de Ecatepec.
+	</p>
+	<p>
+	Su orden contiene los siguientes productos:
+
+
+	<%= render @order.line_items %>
+
+
+	Le enviaremos un e-mail por separado cuando su orden se haya enviado.
+
+</p>

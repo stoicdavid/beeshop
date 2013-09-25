@@ -1,0 +1,6 @@
+Estimado <%= @order.name %>
+Gracias por haber comprado con Bombas y Equipos de Ecatepec.
+Su orden contiene los siguientes productos:
+<%= render @order.line_items %>
+
+Le enviaremos un e-mail por separado cuando su orden se haya enviado.
