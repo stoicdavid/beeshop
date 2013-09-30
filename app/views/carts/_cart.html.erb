@@ -5,8 +5,7 @@
 	    <h3 class="panel-title">Productos</h3>
 	  </div>
 	  <div class="panel-body">
-		  <%= render :partial => '/line_items/line_item', :collection => cart.line_items %>
-
+		  <%= render (cart.line_items) %>
 
 		  <%= button_to 'Empty cart', cart, method: :delete, data: { confirm: 'Are you sure?' },:class => "btn btn-danger" %>
 	  </div>

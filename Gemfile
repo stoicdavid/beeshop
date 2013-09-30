@@ -33,9 +33,6 @@ gem 'jbuilder', '~> 1.2'
 #include twitter bootstrap
 gem 'anjlab-bootstrap-rails', '>= 3.0.0.0', :require => 'bootstrap-rails'
 
-#devise
-gem 'devise'
-
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
