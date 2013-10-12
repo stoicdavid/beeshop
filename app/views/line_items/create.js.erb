@@ -1,5 +1,6 @@
 $('#flash').hide();
 $('#cartcontent').html("<%= escape_javascript render(@cart) %>");
-$('#current_item').css({'background-color':'#88ff88'}).animate({'background-color':'#114411'}, 1000);
-$('#current_cart').css({'background-color':'#88ff88'}).animate({'background-color':'#114411'}, 1000);
-$('#items').html("<%= @cart.total_items %>");
+$('#current_itema').css({'background-color':'#88ff88'}).animate({'background-color':'#114411'}, 1000);
+$('#current_itemb').css({'background-color':'#88ff88'}).animate({'background-color':'#114411'}, 1000);
+$('#itemsa').html("<%= @cart.total_items %>");
+$('#itemsb').html("<%= @cart.total_items %>");
